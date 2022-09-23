@@ -1,2 +1,2 @@
 # game-mario
- Jogo simples de do mario.
+ Jogo simples do mario.
