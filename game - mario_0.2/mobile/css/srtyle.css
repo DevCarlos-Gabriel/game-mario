@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.big-board{
+    margin: 1rem;
+    border: 10px solid black;
+    height: 245px;
+    width: 500px;
+}
+
+.game-board{
+    width: 100%;
+    height: 95%;
+    border-bottom: 15px solid rgb(14, 170, 14);
+    margin: 0 auto;
+    /* Interfere nos elementos que estiverem proximos*/
+    position: relative;
+    /* Tudo o que sair desta div desaparecerá*/
+    overflow: hidden;
+    background: linear-gradient(rgba(123, 194, 241, 0.849),rgb(203, 203, 218));
+}
+
+.pipe{
+     /* Não interfere nos elementos que estiverem proximos*/
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+        /*Animação do pipe*/
+    animation: pipe-animation 1.5s infinite;
+}
+
+.mario{
+    width: 90px;
+    position: absolute;
+    bottom: 0;
+}
+
+.clouds{
+    width: 250px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+    /*Animação de pulo*/
+.jump-mario{
+    animation: jump-animation-mario 500ms ease-out;
+}
+
+@keyframes jump-animation-mario{
+    0% {
+        bottom: 0;
+
+    }
+
+   10% {
+        bottom: 100px;
+        
+
+    }
+
+    20% {
+        bottom: 120px;
+        
+
+    }
+
+    30% {
+        bottom: 125px;
+    
+    }
+
+    40% {
+        bottom: 130px;
+    
+    }
+
+    50% {
+        bottom: 135px;
+        
+    }
+
+    /*60% {
+        bottom: 130px;
+    
+    }
+
+    70% {
+        bottom: 125px;
+        
+    }
+
+    80% {
+        bottom: 120px;
+    }
+
+    90% {
+        bottom: 100px;
+    }*/
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation{
+    1%{
+        /* Obs: essa posição tem que ser igual a largura, para que assim o cano fique fora da tela e assim possa parecer que ele esta vindo naturalmente */
+        right: -80px;
+    }
+
+    11%{
+        right: 11%;
+    }
+
+    15%{
+        right: 15%;
+    }
+
+    20%{
+        right: 20%;
+    }
+
+    25%{
+        right: 25%;
+    }
+
+    30%{
+        right: 30%;
+    }
+
+    35%{
+        right: 35%;
+    }
+
+    40%{
+        right: 40%;
+    }
+
+    45%{
+        right: 45%;
+    }
+
+    50%{
+        right: 50%;
+    }
+
+    /*55%{
+        right: 55%;
+    }
+
+    70%{
+        right: 70%;
+    }
+
+    75%{
+        right: 75%;
+    }
+
+    80%{
+        right: 80%;
+    }
+
+    85%{
+        right: 85%;
+    }*/
+
+    100%{
+        right: 110%;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -250px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+/*CSS para a contagem de pontos.*/
+.score{
+    margin-top: 1rem;
+    margin-bottom: 9rem;
+    margin-left: 0.5rem;
+   border: 6px solid;
+   width: 12rem;
+   position: absolute;
+}
+
+.point{
+    font-size: x-large;
+    color: black;
+}
+
+/*Tela de Retray*/
+
+.retry{
+    position: relative;
+    /*border: 5px solid;*/
+}
+
+.text{
+    font-size: x-large;
+    width: 100%;
+    height: 20%;
+    margin-top: 5%;
+}
+
+.text-2{
+    font-size: x-large;
+    width: 100%;
+    height: 20%;
+}
+
+.background{
+    margin: auto;
+    margin-top: 2rem;
+    border: transparent;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.bot{
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: transparent;
+}
