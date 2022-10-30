@@ -9,3 +9,6 @@
   * Now the jump is only with the keys "Space" and "Up arrow";
   * Scoring system;
   * Retry.
+  
+ ## Credits:
+  * [Manual do Dev](https://www.youtube.com/watch?v=r9buAwVBDhA&t=271s&ab_channel=ManualdoDev) 
